@@ -1,0 +1,10 @@
+dungeon-crawler-unity/.idea
+dungeon-crawler-unity/UserSettings
+dungeon-crawler-unity/Library
+dungeon-crawler-unity/Logs
+dungeon-crawler-unity/Temp
+dungeon-crawler-unity/obj
+*.csproj
+*.sln
+*DS_Store
+xflow-test-unity/Recordings
