@@ -36,7 +36,7 @@ namespace Client {
             } else if (Mathf.Abs (swipeHorizontal) >= MinSwipeMagnitude) {
                 foreach (var entity in _units.Value) {
                     ref var rotCmd = ref _rotateCommandPool.Value.Add (entity);
-                    var side = (swipeHorizontal > 0f) ? 1 : 0;
+                    var side = swipeHorizontal > 0f ? 1 : -1;
                     rotCmd.Side = side;
                 }
             }
