@@ -4,11 +4,11 @@ using UnityEngine;
 
 namespace Client {
     sealed class UnitStartRotatingSystem : IEcsRunSystem {
-        readonly EcsFilterInject<Inc<Unit, RotateCommand>, Exc<Animated>> _units = default;
+        readonly EcsFilterInject<Inc<Unit, RotateCommand>, Exc<Animating>> _units = default;
         
-        readonly EcsPoolInject<Animated> _animatedPool = default;
+        readonly EcsPoolInject<Animating> _animatedPool = default;
         readonly EcsPoolInject<Rotating> _rotatingPool = default;
-        
+
         public void Run (EcsSystems systems) {
             foreach (var entity in _units.Value) {
                 ref var unit = ref _units.Pools.Inc1.Get (entity);

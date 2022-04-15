@@ -4,9 +4,9 @@ using UnityEngine;
 
 namespace Client {
     sealed class UnitStartMovingSystem : IEcsRunSystem {
-        readonly EcsFilterInject<Inc<Unit, MoveCommand>, Exc<Animated>> _units = default;
+        readonly EcsFilterInject<Inc<Unit, MoveCommand>, Exc<Animating>> _units = default;
 
-        readonly EcsPoolInject<Animated> _animatedPool = default;
+        readonly EcsPoolInject<Animating> _animatedPool = default;
         readonly EcsPoolInject<Moving> _movingPool = default;
         readonly EcsPoolInject<Cell> _cellPool = default;
 
