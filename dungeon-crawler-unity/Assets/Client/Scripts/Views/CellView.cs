@@ -2,8 +2,10 @@ using UnityEditor;
 using UnityEngine;
 
 namespace Client {
+#if UNITY_EDITOR
     [ExecuteAlways]
     [SelectionBase]
+#endif
     sealed class CellView : MonoBehaviour {
         public Transform Transform;
         public float XzStep = 3f;
