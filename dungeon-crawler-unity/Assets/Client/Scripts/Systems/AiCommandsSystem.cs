@@ -76,7 +76,7 @@ namespace Client {
             var maxDamage = 0;
             var foundAbility = -1;
 
-            for (int i = 0; i < hasAbilities.AbilitiesCount; i++) {
+            for (int i = 0; i < hasAbilities.Entities.Count; i++) {
                 ref var ability = ref _abilityPool.Value.Get (hasAbilities.Entities[i]);
                 // skip if not enough AP.
                 if (unit.ActionPoints < ability.ActionPointsCost) {

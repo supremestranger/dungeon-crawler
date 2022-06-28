@@ -69,8 +69,7 @@ namespace Client {
                 abilityView.KeyIdx.text = (i + 1).ToString();
                 _ah.Value.GetAddComponentCallback (i)?.Invoke (world, abilityEntity);
                 
-                hasAbilities.Entities[i] = abilityEntity;
-                hasAbilities.AbilitiesCount++;
+                hasAbilities.Entities.Add (abilityEntity);
             }
         }
     }

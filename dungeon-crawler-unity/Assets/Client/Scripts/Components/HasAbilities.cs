@@ -1,12 +1,12 @@
+using System.Collections.Generic;
 using Leopotam.EcsLite;
 
 namespace Client {
     struct HasAbilities : IEcsAutoReset<HasAbilities> {
-        public int[] Entities;
-        public int AbilitiesCount;
+        public List<int> Entities;
 
         public void AutoReset (ref HasAbilities c) {
-            c.Entities ??= new int[64];
+            c.Entities ??= new List<int> (64);
         }
     }
 }

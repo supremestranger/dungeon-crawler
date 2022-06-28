@@ -72,8 +72,7 @@ namespace Client {
 
                 _ah.Value.GetAddComponentCallback (i)?.Invoke (world, abilityEntity);
                 
-                hasAbilities.Entities[i] = abilityEntity;
-                hasAbilities.AbilitiesCount++;
+                hasAbilities.Entities.Add (abilityEntity);
             }
         }
     }
