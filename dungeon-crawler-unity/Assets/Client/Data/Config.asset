@@ -13,4 +13,11 @@ MonoBehaviour:
   m_Name: Config
   m_EditorClassIdentifier: 
   GridWidth: 64
-  Gridheight: 64
+  GridHeight: 64
+  UnitLayerMask:
+    serializedVersion: 2
+    m_Bits: 8
+  AbilitiesConfigs:
+  - {fileID: 11400000, guid: 51c40ffb1bdcf9942af17f81a48a9f83, type: 2}
+  - {fileID: 11400000, guid: 7454e4469974c1e4ba8b75a057a51e55, type: 2}
+  - {fileID: 11400000, guid: 94420d28497243d4dbb75fb04a1cf371, type: 2}

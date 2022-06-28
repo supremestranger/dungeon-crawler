@@ -14,9 +14,10 @@ namespace Client {
                 var entity = world.NewEntity ();
                 ref var cell = ref _cellPool.Value.Add (entity);
                 var position = cellView.transform.position;
-                var x = (int) (position.x / cellView.XzStep);
-                var y = (int) (position.z / cellView.XzStep);
+                var x = (int) (position.x / cellView.Size);
+                var y = (int) (position.z / cellView.Size);
                 cell.View = cellView;
+                cell.Entity = -1;
                 _gs.Value.AddCell (new Int2 (x, y), entity);
             }
         }

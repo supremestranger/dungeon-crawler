@@ -1,5 +1,5 @@
 namespace Client {
-    struct Int2 {
+    public struct Int2 {
         public int X;
         public int Y;
 

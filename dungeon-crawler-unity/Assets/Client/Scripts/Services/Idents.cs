@@ -15,6 +15,14 @@ namespace Client {
             public const string Left = "Left";
             public const string Right = "Right";
             public const string TouchListener = "TouchListener";
+            public const string Ability = "Ability";
+            public const string Abilities = "Abilities";
+            public const string PlayerAp = "PlayerAp";
+            public const string GameOverPopup = "GameOverPopup";
+        }
+
+        public static class Paths {
+            public const string Units = "Units/";
         }
     }
 }

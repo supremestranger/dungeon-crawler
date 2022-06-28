@@ -9,5 +9,11 @@ namespace Client {
         public Quaternion Rotation;
         public float MoveSpeed;
         public float RotateSpeed;
+        public int ActionPoints;
+        public int Initiative;
+        public int Health;
+        public int Radius;
+        public Side Side;
+        public UnitView View;
     }
 }

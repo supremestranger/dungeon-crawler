@@ -1,5 +1,6 @@
 using Leopotam.EcsLite.Di;
 using Leopotam.EcsLite.Unity.Ugui;
+using UnityEngine;
 using UnityEngine.Scripting;
 
 namespace Client {
@@ -8,6 +9,11 @@ namespace Client {
 
         readonly EcsPoolInject<MoveCommand> _moveCommandPool = default;
         readonly EcsPoolInject<RotateCommand> _rotateCommandPool = default;
+        readonly EcsPoolInject<HasAbilities> _hasAbilitiesPool = default;
+        readonly EcsPoolInject<Ability> _abilityPool = default;
+        readonly EcsPoolInject<Apply> _applyPool = default;
+
+        readonly EcsCustomInject<AbilityHelper> _ah = default;
 
         [Preserve]
         [EcsUguiClickEvent (Idents.Ui.Forward, Idents.Worlds.Events)]
@@ -44,5 +50,22 @@ namespace Client {
                 rotCmd.Side = 1;
             }
         }
+
+        [Preserve]
+        [EcsUguiClickEvent (Idents.Ui.Ability, Idents.Worlds.Events)]
+        void OnClickAbility (in EcsUguiClickEvent e) {
+            var abilityView = e.Sender.GetComponent<AbilityView> ();
+            foreach (var entity in _units.Value) {
+                ref var abilities = ref _hasAbilitiesPool.Value.Get (entity);
+                var abilityEntity = abilities.Entities[abilityView.AbilityIdx];
+                ref var ability = ref _abilityPool.Value.Get (abilityEntity);
+                ref var unit = ref _units.Pools.Inc1.Get (entity);
+                var dmg = _ah.Value.GetValidateCallback (ability.Id).Invoke (unit, ability.Damage);
+                if (dmg != 0 && unit.ActionPoints >= ability.ActionPointsCost) {
+                    _applyPool.Value.Add (abilityEntity);
+                }
+            }
+        }
     }
 }
+
