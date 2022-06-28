@@ -9,12 +9,12 @@ namespace Client {
         public Transform Transform;
         public float XzStep = 3f;
         public float YStep = 1f;
-
+        
+#if UNITY_EDITOR
         void Awake () {
             Transform = transform;
         }
 
-#if UNITY_EDITOR
         void Update () {
             if (!Application.isPlaying && Transform.hasChanged) {
                 var newPos = Vector3.zero;

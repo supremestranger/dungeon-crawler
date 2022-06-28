@@ -10,11 +10,11 @@ namespace Client {
         public Transform Transform;
         public float Size = 3f;
 
+#if UNITY_EDITOR
         void Awake () {
             Transform = transform;
         }
         
-#if UNITY_EDITOR
         void OnDrawGizmos () {
             var selected = Selection.Contains (gameObject);
             Gizmos.color = selected ? Color.green : Color.cyan;
