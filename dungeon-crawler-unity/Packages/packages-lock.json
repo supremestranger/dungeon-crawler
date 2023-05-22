@@ -1,35 +1,35 @@
 {
   "dependencies": {
     "com.leopotam.ecslite": {
-      "version": "https://github.com/Leopotam/ecslite.git",
+      "version": "https://github.com/Leopotam/ecslite.git#2022.3.22",
       "depth": 0,
       "source": "git",
       "dependencies": {},
       "hash": "d8ffdf2af93a2346ca15e31dcdf2ebcc4f02cb26"
     },
     "com.leopotam.ecslite.di": {
-      "version": "https://github.com/Leopotam/ecslite-di.git",
+      "version": "https://github.com/Leopotam/ecslite-di.git#2022.3.22",
       "depth": 0,
       "source": "git",
       "dependencies": {},
       "hash": "2a47fbf2f7edc69777d201ce2c9310ef723aae9a"
     },
     "com.leopotam.ecslite.extendedsystems": {
-      "version": "https://github.com/Leopotam/ecslite-extendedsystems.git",
+      "version": "https://github.com/Leopotam/ecslite-extendedsystems.git#2022.3.22",
       "depth": 0,
       "source": "git",
       "dependencies": {},
       "hash": "645d4f27b12020630d4f1e252cb27deec04d2659"
     },
     "com.leopotam.ecslite.unity.ugui": {
-      "version": "https://github.com/Leopotam/ecslite-unity-ugui.git",
+      "version": "https://github.com/Leopotam/ecslite-unity-ugui.git#2022.3.22",
       "depth": 0,
       "source": "git",
       "dependencies": {},
       "hash": "632e04dd4ceda9d8b5d6c43d8d54b1b2e80f34fd"
     },
     "com.leopotam.ecslite.unityeditor": {
-      "version": "https://github.com/Leopotam/ecslite-unityeditor.git",
+      "version": "https://github.com/Leopotam/ecslite-unityeditor.git#2022.3.22",
       "depth": 0,
       "source": "git",
       "dependencies": {},
